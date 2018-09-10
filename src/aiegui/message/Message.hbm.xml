@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 10, 2018 5:10:09 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="aiegui.message.Message" table="message" schema="dbo" catalog="AIE_GUI" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+        <property name="sourceSystemId" type="java.lang.Integer">
+            <column name="source_system_id" />
+        </property>
+        <property name="systemId" type="java.lang.Integer">
+            <column name="system_id" />
+        </property>
+        <property name="destinationSystemId" type="java.lang.Integer">
+            <column name="destination_system_id" />
+        </property>
+        <property name="interfaceId" type="java.lang.Integer">
+            <column name="interface_id" />
+        </property>
+        <property name="airport" type="string">
+            <column name="airport" length="50" />
+        </property>
+        <property name="messageType" type="java.lang.Integer">
+            <column name="message_type" />
+        </property>
+        <property name="messageSubType" type="java.lang.Integer">
+            <column name="message_sub_type" />
+        </property>
+        <property name="messageId" type="string">
+            <column name="message_id" length="512" />
+        </property>
+        <property name="correlationId" type="string">
+            <column name="correlation_id" length="512" />
+        </property>
+        <property name="uuid" type="string">
+            <column name="uuid" length="512" />
+        </property>
+        <property name="message" type="string">
+            <column name="message" />
+        </property>
+        <property name="rawMessage" type="string">
+            <column name="raw_message" length="8000" />
+        </property>
+        <property name="rawMessageType" type="string">
+            <column name="raw_message_type" length="50" />
+        </property>
+        <property name="errorCode" type="string">
+            <column name="error_code" length="50" />
+        </property>
+        <property name="stoDate" type="date">
+            <column name="sto_date" length="10" />
+        </property>
+        <property name="stoTime" type="time">
+            <column name="sto_time" length="16" />
+        </property>
+        <property name="flightNumber" type="string">
+            <column name="flight_number" length="25" />
+        </property>
+        <property name="icaoAirline" type="string">
+            <column name="icao_airline" length="25" />
+        </property>
+        <property name="iataAirline" type="string">
+            <column name="iata_airline" length="25" />
+        </property>
+        <property name="datetime" type="timestamp">
+            <column name="datetime" length="23" />
+        </property>
+        <property name="accepted" type="java.lang.Boolean">
+            <column name="accepted" />
+        </property>
+        <property name="cachePopulated" type="java.lang.Boolean">
+            <column name="cache_populated" />
+        </property>
+        <property name="messageCacheId" type="java.lang.Integer">
+            <column name="message_cache_id" />
+        </property>
+    </class>
+</hibernate-mapping>
